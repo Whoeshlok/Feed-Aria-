@@ -2,7 +2,7 @@
 
 A fun web game where you help Aria catch as many treats as possible before time runs out! Built with HTML, CSS, and JavaScript. Includes music and animated effects.
 
-**Play it here:** [Feed Aria Game](https://whoeshlok.github.io/Feed-Aria-/Feed-Aria!!%20%E2%9C%A81.html)
+**Play it here:** [Feed Aria Game](https://whoeshlok.github.io/FeedAria/Feed-Aria!!%20%E2%9C%A81.html)
 
 ## How to Play
 
