@@ -19,7 +19,7 @@ A fun web game where you help Aria catch as many treats as possible before time 
 
 ## Credits
 
-- Game by [Your Name]
+- Game by [Eshlok Tandon]
 - Background image from Unsplash
 - Music: Mr. Bean Theme Song (for educational/demo use)
 
