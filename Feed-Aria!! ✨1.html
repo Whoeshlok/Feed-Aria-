@@ -30,7 +30,6 @@
     z-index: 10;
   }
 
-  /* Clouds container */
   #clouds {
     position: absolute;
     width: 100%;
@@ -50,7 +49,6 @@
     animation: floatCloud linear infinite;
   }
 
-  /* Different sized clouds */
   .cloud.small {
     width: 80px; height: 50px;
     animation-duration: 40s;
@@ -64,14 +62,12 @@
     animation-duration: 90s;
   }
 
-  /* Cloud float left to right */
   @keyframes floatCloud {
     0% { left: -250px; opacity: 0; }
     10% { opacity: 0.9; }
     100% { left: 110vw; opacity: 0; }
   }
 
-  /* Landing page text */
   #landingPage h1 {
     font-size: 4rem;
     color: #005f99;
@@ -85,7 +81,6 @@
     to { opacity: 1; }
   }
 
-  /* Start button */
   #startBtn {
     padding: 18px 55px;
     font-size: 1.7rem;
@@ -121,7 +116,6 @@
     overflow: hidden;
   }
 
-  /* Soft overlay for better contrast */
   #game::before {
     content: "";
     position: absolute;
@@ -278,7 +272,6 @@
     z-index: 20;
   }
 
-  /* End Screen */
   .endScreen {
     display: none;
     position: absolute;
@@ -300,7 +293,6 @@
     color: #ff4d6d;
   }
 
-  /* Floating particles on game background */
   #particles {
     position: absolute;
     width: 100%;
@@ -339,7 +331,6 @@
     100% { transform: translateY(-20vh) translateX(20px); opacity: 0; }
   }
 
-  /* Outro Page - Space Background */
   #outroPage {
     background: #0a1026;
     position: fixed;
@@ -460,7 +451,6 @@
     }
   }
 
-  /* Story animation */
   #landingPage .story {
     opacity: 0;
     transform: translateY(30px);
@@ -556,7 +546,6 @@
     </div>
   </div>
 
-  <!-- Add Mr. Bean Theme Song audio element before the script -->
   <audio id="gameSong" src="audio.mp3"></audio>
 
 <script>
@@ -592,7 +581,6 @@
     girl.style.left = girlX + "px";
   }
 
-  // Create and drop food elements with rotate & scale animation
   function dropFood() {
     const food = document.createElement("div");
     food.classList.add("food");
@@ -622,7 +610,7 @@
         scoreDisplay.innerText = `Score: ${score}`;
       }
 
-      // Remove if out of screen
+      
       if (y > window.innerHeight) {
         clearInterval(fall);
         food.remove();
@@ -635,7 +623,6 @@
     moveGirl();
   }
 
-  // Create floating pink particles on game background
   function createParticles(num) {
     for(let i=0; i<num; i++) {
       const p = document.createElement("div");
@@ -699,10 +686,8 @@
     startGame();
   });
 
-  // Initialize particles
   createParticles(30);
 
-  // Responsive resize handling (adjust girl position)
   window.addEventListener("resize", () => {
     if (girlX > window.innerWidth - 70) girlX = window.innerWidth - 70;
     girl.style.left = girlX + "px";
@@ -713,7 +698,7 @@
     landingPage.style.display = "flex";
   });
 
-  // Animated stars for outro page
+
   function createOutroStars() {
     const canvas = document.getElementById('outroStars');
     if (!canvas) return;
@@ -761,7 +746,7 @@
     });
   }
 
-  // Confetti burst effect
+
   function showConfetti() {
     const colors = ['#ffb347', '#7ecfff', '#ff4d6d', '#fff', '#ffe0f0', '#c2e9fb'];
     const confetti = document.createElement('div');
@@ -780,7 +765,6 @@
     setTimeout(() => confetti.remove(), 2500);
   }
 
-  // Confetti fall animation
   const style = document.createElement('style');
   style.innerHTML = `
     @keyframes confetti-fall {
@@ -791,7 +775,7 @@
   `;
   document.head.appendChild(style);
 
-  // When showing outroPage, reset and trigger animations
+ 
   function showOutroPage() {
     outroPage.style.display = "flex";
     createOutroStars();
